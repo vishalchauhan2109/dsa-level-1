@@ -1,0 +1,21 @@
+
+import java.util.*;
+import java.io.*;
+
+public class main{
+    public static void main(String[] args){
+        Scanner scn = new Scanner(System.in);
+        int n1 = scn.nextInt();
+        int n2 = scn.nextInt();
+        while(n2 != 0){
+                int r = n1%n2;
+                n1 =n2;
+                n2 =r;
+            
+        }
+            System.out.print(n1);
+        
+
+
+     }
+ }
