@@ -1,0 +1,20 @@
+import java.util.*;
+import java.io.*;
+
+public class main{
+    public static void main(String[] args){
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int ans = 0;
+        
+        for(int i = 1; n > 0; i++){
+         
+         int r = n%10;
+         int q = n/10;
+         int pow =(int) Math.pow(10,r-1);
+         ans += i * pow;
+         n = q;
+        }
+        System.out.print(ans);
+     }
+ }
