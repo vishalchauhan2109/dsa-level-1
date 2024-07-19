@@ -1,0 +1,26 @@
+import java.util.*;
+import java.io.*;
+
+public class main{
+    public static void main(String[] args){
+    Scanner scn = new Scanner(System.in);
+    int n1 = scn.nextInt();
+    int n2 = scn.nextInt();
+
+    for(int n = n1; n <= n2; n++ ){
+            int count = 0;
+      for(int i = 2; i*i <= n; i++){
+        
+        if( n%i == 0){
+            count++;
+            break;
+        }
+         
+      }
+    
+          if(count == 0){
+          System.out.println(n +"number is prime");
+          }
+    }
+    }
+ }
