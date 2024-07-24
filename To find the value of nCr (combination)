@@ -1,0 +1,26 @@
+import java.util.*;
+import java.io.*;
+
+public class main{
+    public static void main(String[] args){
+        Scanner scn = new Scanner(System.in);
+       int n = scn.nextInt();
+       int r = scn.nextInt();
+       
+       int nf = 1;
+       for(int i =1; i<=n; i++){
+           nf *= i;
+       }
+       int rf = 1;
+       for(int i =1; i<=r; i++){
+           rf *= i;
+       }
+       int nmr = n -r;
+       int nmrf = 1;
+       for(int i =1; i<=nmr; i++){
+           nmrf *= i;
+       }
+       int ans = nf/(nmrf*rf);
+       System.out.print(ans);
+     }
+ }
