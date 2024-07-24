@@ -1,0 +1,23 @@
+import java.util.*;
+import java.io.*;
+
+public class main{
+    public static void main(String[] args){
+       Scanner scn = new Scanner(System.in);
+       int n = scn.nextInt();
+       int b = scn.nextInt();
+       int ans = getvalueinbase(n, b);
+       System.out.println(ans);
+    }
+    public static int getvalueinbase(int n, int b){
+        int power = 1;
+        int value = 0;
+       while(n!=0){
+        int q = n % b ;
+        n = n / b;
+       value += q*power;
+        power *= 10;
+       }
+       return value;
+       } 
+     }
