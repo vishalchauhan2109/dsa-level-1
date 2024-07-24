@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+
+public class main{
+    public static void main(String[] args){
+        Scanner scn = new Scanner(System.in);
+       int n = scn.nextInt();
+       int d = scn.nextInt();
+       int f = getdigitfrequency(n, d);
+       System.out.println(f);
+    }       
+       public static int getdigitfrequency(int n,int d){
+            int count = 0;
+        for(int i =1; n != 0; i++){
+          
+          int m = n % 10;
+          int q = n/10 ;
+          if(m == d){
+             count++;
+          }else{
+       
+          }
+           n = q;
+          }
+        return count;
+       
+       } 
+     }
