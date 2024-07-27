@@ -1,0 +1,49 @@
+import java.util.*;
+import java.io.*;
+
+public class main{
+    public static void main(String[] args){
+    Scanner scn = new Scanner(System.in);
+    int n = scn.nextInt();
+   
+//1st array
+    int []ar1 =new int[n];
+    for(int i =0; i<ar1.length; i++){
+        ar1[i] = scn.nextInt();
+    }
+     int m = scn.nextInt();
+//2nd array
+    int []ar2 =new int[m];
+    for(int i =0; i<ar2.length; i++){
+        ar2[i] = scn.nextInt();
+    }
+//sum wala array
+        int[]sum = new int[n>m?n+1:m+1];
+        int i = ar1.length-1;
+        int j = ar2.length-1;
+        int k = sum.length-1;
+        int c =0;
+        while(k>=0){
+        int add = c;
+        if(i >= 0){
+            add += ar1[i];
+        }
+        if(j >= 0){
+            add += ar2[j];
+        }
+         c = add/10;
+        add = add % 10;
+       
+       
+        sum[k] = add;
+        i--;
+        j--;
+        k--;
+        
+        }    
+        
+        for(int val : sum){
+            System.out.println(val);
+        }
+  }
+ }
