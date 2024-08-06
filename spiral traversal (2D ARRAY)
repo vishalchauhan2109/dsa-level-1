@@ -1,0 +1,48 @@
+
+
+import java.util.*;
+import java.io.*;
+
+public class main{
+    public static void main(String[] args){
+        Scanner scn = new Scanner(System.in);
+        int r= scn.nextInt();
+        int c= scn.nextInt();
+        int[][]arr = new int[r][c];
+        for(int i = 0; i< arr.length; i++){
+            for(int j = 0; j < arr[0].length; j++){
+                arr[i][j] = scn.nextInt();
+            }
+        }
+        int rmin = 0;
+        int cmin = 0;
+        int rmax = arr.length-1;
+        int cmax = arr[0].length-1;
+        int count = 0;
+        int element = r*c;
+        
+         while(count < element){
+            for(int i = rmin; i <= rmax  && count < r*c; i++ ){
+            System.out.println(arr[i][cmin]);
+            count++;
+            
+            }cmin++;
+            for(int j =cmin; j <= cmax && count < r*c; j++  ){
+            System.out.println(arr[rmax][j]);
+            count++;
+            
+            }rmax--;
+        
+        for(int i = rmax; i <= rmin   && count < r*c; i++ ){
+            System.out.println(arr[i][cmax]);
+             count++;
+              
+            }cmax--; 
+            for(int j =cmax; j <= cmin && count < r*c; j++ ){
+            System.out.println(arr[rmin][j]); 
+            count++;
+            
+            }rmin++;
+      }
+    }
+ }
