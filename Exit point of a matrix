@@ -1,0 +1,49 @@
+import java.util.*;
+import java.io.*;
+
+public class main{
+    public static void main(String[] args){
+        Scanner scn = new Scanner(System.in);
+        int r= scn.nextInt();
+        int c= scn.nextInt();
+        int[][]arr = new int[r][c];
+        for(int i = 0; i< arr.length; i++){
+            for(int j = 0; j < arr[0].length; j++){
+                arr[i][j] = scn.nextInt();
+            }
+            
+        }
+        int i =0;
+        int j = 0;
+        while(true){
+            
+        int dimn = 0;
+        dimn = (dimn + arr[i][j])%4;
+        if(dimn== 0){
+            j++;
+        }
+        else if(dimn == 1){
+            i++;
+        }
+        else if(dimn == 2){
+            j--;
+        }
+        else{
+            i--;
+        }
+        if(i < 0){
+            i++;
+        }else if(j < 0){
+            j++;
+        }else if(i == arr.length){
+            i--;
+        }else if(j == arr[0].length){
+            j--;
+        }
+        
+        System.out.println(i);
+        System.out.println(j);
+        }
+        
+    }
+ }
